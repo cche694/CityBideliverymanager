@@ -17,6 +17,7 @@ class Demo extends Component {
           onChange={(e) => this.props.handleChange(e)}
           value={this.props.value}
         />
+        <div className={`${Style.test}`}></div>
       </div>
     );
   }
