@@ -38,7 +38,7 @@ class Header extends Component {
           <Col span="20" className={`${Style.weather}`}>
             <span className={`${Style.data}`}>{time}</span>
             <span className={`${Style.weatherDeatail}`}>
-              {province}市 {weather}天 {temperature}&deg;
+              {province}市 a{weather}天 {temperature}&deg;
             </span>
           </Col>
         </Row>
