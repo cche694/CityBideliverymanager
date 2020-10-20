@@ -1,0 +1,32 @@
+.header {
+  .headerTop {
+    height: 60px;
+    line-height: 60px;
+    padding: 0 20px;
+    text-align: right;
+    a {
+      margin-left: 40px;
+    }
+  }
+  .breadcrumb {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    border-top: 2px solid #f9c700;
+    .title {
+      text-align: center;
+    }
+    .weather {
+      text-align: right;
+    }
+    .data {
+      margin-right: 20px;
+      font-size: 16px;
+      color:#f9c700;
+    }
+    .weatherDeatail {
+      font-size: 16px;
+      color: rgb(129, 136, 221);
+    }
+  }
+}

@@ -44,6 +44,7 @@ class NavLeft extends Component {
           mode="vertical"
           theme="dark"
           className={`${Style.Menu}`}
+          subMenuCloseDelay={.2}
         >
           {this.renderMenu(navList)}
         </Menu>

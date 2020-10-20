@@ -2,10 +2,11 @@
   .navLeft {
     background-color: #001529;
     height: calc(100vh);
-
+    
   }
   .main {
     .content {
+      min-width:960px ;
     }
   }
 }
