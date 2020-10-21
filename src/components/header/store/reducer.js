@@ -1,6 +1,7 @@
 import { fromJS } from "immutable";
 import * as ActionCreator from "./actionCreator";
 import * as ActionType from "./actionType";
+import {fetchData} from "../../../api"
 const defaultState = fromJS({
   username: "",
   time: "",

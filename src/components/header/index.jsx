@@ -4,11 +4,10 @@ import { ActionCreator } from "./store";
 import { Row, Col } from "antd";
 import Style from "./style.module.scss";
 import Util from "../../util/utils.js";
-import axios from "axios";
+
 
 class Header extends Component {
   componentDidMount() {
-    // apikey eb629ff4809d7e6274b2d94c0bcfdee8
     this.props.setName("changche");
     setInterval(() => {
       let sysTime = Util.fromateDate(new Date().getTime());
@@ -20,7 +19,6 @@ class Header extends Component {
       this.props.getWeather();
     }, 21600000);
   }
-
   render() {
     const { userName, time, province, weather, temperature } = this.props;
     return (
@@ -38,7 +36,7 @@ class Header extends Component {
           <Col span="20" className={`${Style.weather}`}>
             <span className={`${Style.data}`}>{time}</span>
             <span className={`${Style.weatherDeatail}`}>
-              {province}市 a{weather}天 {temperature}&deg;
+              {province}市 {weather}天 {temperature}&deg;
             </span>
           </Col>
         </Row>

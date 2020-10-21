@@ -1,5 +1,6 @@
 import * as ActionType from "./actionType";
-import axios from "axios";
+import {fetchData} from "../../../api";
+
 const _getWetherAction = (province, weather, temperature) => ({
   type: ActionType.GET_WEATHER,
   province,
@@ -15,10 +16,13 @@ export const SetTimeAction = (time) => ({
   time,
 });
 export const GetWeatherAction = () => {
+  // apikey cfd6471f4b7e8310fde334b4f4040d42
   return (dispatch) => {
     const url =
       "/api/v3/weather/weatherInfo?city=110101&key=cfd6471f4b7e8310fde334b4f4040d42";
-    axios.get(url).then((res) => {
+    fetchData({
+      url: url,
+    }).then((res) => {
       console.log(res.data.lives[0]);
       const data = res.data.lives[0];
       const action = _getWetherAction(
