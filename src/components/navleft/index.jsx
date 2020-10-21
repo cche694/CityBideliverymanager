@@ -9,6 +9,7 @@ import menuList from "../../config/menuConfig";
 import { connect } from "react-redux";
 import { ActionCreator } from "./store";
 import Style from "./style.module.scss";
+import { NavLink } from "react-router-dom";
 
 const { SubMenu } = Menu;
 class NavLeft extends Component {
@@ -26,7 +27,11 @@ class NavLeft extends Component {
           </SubMenu>
         );
       } else {
-        return <Menu.Item key={item.key}>{item.title}</Menu.Item>;
+        return (
+          <Menu.Item key={item.key}>
+            <NavLink to={`/admin${item.key}`}>{item.title}</NavLink>
+          </Menu.Item>
+        );
       }
     });
   };
@@ -36,15 +41,19 @@ class NavLeft extends Component {
     return (
       <div>
         <div className={`${Style.logo}`}>
-          <img src="/assets/logo-ant.svg" alt="logo" className={`${Style.logoImg}`} />
+          <img
+            src="/assets/logo-ant.svg"
+            alt="logo"
+            className={`${Style.logoImg}`}
+          />
           <h1 className={`${Style.logoHeader}`}>CityMs</h1>
         </div>
         <Menu
-          style={{ width: "100% ", height: "100vh" }}
+          style={{ width: "100% " }}
           mode="vertical"
           theme="dark"
           className={`${Style.Menu}`}
-          subMenuCloseDelay={.2}
+          subMenuCloseDelay={0.2}
         >
           {this.renderMenu(navList)}
         </Menu>

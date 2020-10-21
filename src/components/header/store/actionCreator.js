@@ -1,5 +1,5 @@
 import * as ActionType from "./actionType";
-import {fetchData} from "../../../axios"
+import { fetchData } from "../../../axios";
 
 const _getWetherAction = (province, weather, temperature) => ({
   type: ActionType.GET_WEATHER,

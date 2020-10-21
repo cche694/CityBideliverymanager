@@ -5,7 +5,6 @@ import { Row, Col } from "antd";
 import Style from "./style.module.scss";
 import Util from "../../util/utils.js";
 
-
 class Header extends Component {
   componentDidMount() {
     this.props.setName("changche");
@@ -32,6 +31,9 @@ class Header extends Component {
         <Row className={`${Style.breadcrumb}`}>
           <Col span="4" className={`${Style.title}`}>
             首页
+          </Col>
+          <Col className={`${Style.triangle}`}>
+            
           </Col>
           <Col span="20" className={`${Style.weather}`}>
             <span className={`${Style.data}`}>{time}</span>

@@ -2,11 +2,26 @@
   .navLeft {
     background-color: #001529;
     height: calc(100vh);
-    
   }
   .main {
+    background-color: #4e51552a;
+    height: calc(100vh);
+    width: 100vw;
+    overflow: auto;
     .content {
-      min-width:960px ;
+      position: relative;
+      width: 100%;
+      padding: 20px;
+      overflow: auto;
     }
+  }
+}
+button{
+  margin-left: 15px;
+}
+.ant-card{
+  margin-bottom: 10px;
+  .ant-card-body{
+    min-height: 80px;
   }
 }

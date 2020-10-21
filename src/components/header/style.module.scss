@@ -1,4 +1,5 @@
 .header {
+  background-color: #fff;
   .headerTop {
     height: 60px;
     line-height: 60px;
@@ -9,12 +10,23 @@
     }
   }
   .breadcrumb {
+    position: relative;
     height: 40px;
     line-height: 40px;
     padding: 0 20px;
     border-top: 2px solid #f9c700;
     .title {
       text-align: center;
+      &:after{
+        content:" ";
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-top: 10px solid #fff;
+        top: 38px;
+        left: 200px;
+        position: absolute;
+      }
     }
     .weather {
       text-align: right;
@@ -22,11 +34,12 @@
     .data {
       margin-right: 20px;
       font-size: 16px;
-      color:#f9c700;
+      color: #f9c700;
     }
     .weatherDeatail {
       font-size: 16px;
       color: rgb(129, 136, 221);
     }
+  
   }
 }

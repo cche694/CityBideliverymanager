@@ -1,14 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import store from "./store/index.js";
 import { Provider } from "react-redux";
+import IRouter from "./router"
+// import Admin from "./admin"
 
 ReactDOM.render(
   <Provider store={store}>
-    <App></App>
+   <IRouter></IRouter>
   </Provider>,
   document.getElementById("root")
 );
