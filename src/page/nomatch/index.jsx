@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Style from "./style.module.scss";
-
+import { Result, Button } from "antd";
 class NoMatch extends Component {
   constructor(props) {
     super(props);
@@ -8,9 +8,13 @@ class NoMatch extends Component {
   }
   render() {
     return (
-      <div className={`${Style.noMatchWrapper}`}>
-        <div>404 Not Found</div>
-      </div>
+      <Result
+        style={{ background: "#fff" }}
+        status="404"
+        title="404"
+        subTitle="Sorry, the page you visited does not exist."
+        extra={<Button type="primary">Back Home</Button>}
+      />
     );
   }
 }

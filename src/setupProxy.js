@@ -1,12 +1,12 @@
-const { createProxyMiddleware } = require('http-proxy-middleware');
-module.exports = function(app) {
+const { createProxyMiddleware } = require("http-proxy-middleware");
+module.exports = function (app) {
   app.use(
-    '/api',
+    "/api",
     createProxyMiddleware({
-      target: 'https://restapi.amap.com/',	
+      target: "https://restapi.amap.com/",
       changeOrigin: true,
       pathRewrite: {
-        '^/api': ''
+        "^/api": "",
       },
     })
   );
