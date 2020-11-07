@@ -1,6 +1,6 @@
 import * as ActionType from "./actionType";
 import { fetchData } from "../../../axios";
-import axios from "../../../jsonp/index";
+import axios from "../../../jsonp";
 const _getTableList = (list, page, page_size, total_count) => ({
   type: ActionType.GET_TABLE_LIST,
   list,
@@ -12,8 +12,7 @@ export const getList = () => {
   return (dispatch) => {
     axios
       .ajax({
-        url:
-          "/myapi/list",
+        url: "/myapi/list",
         data: {
           paramas: {
             page: 1,

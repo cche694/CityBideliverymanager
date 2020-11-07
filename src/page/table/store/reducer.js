@@ -11,9 +11,9 @@ export default (state = defaultState, action) => {
     case ActionType.GET_TABLE_LIST:
       return state.merge({
         list: action.list,
-        page:action.page,
-        page_size:action.page_size,
-        total_count:action.total_count
+        page: action.page,
+        page_size: action.page_size,
+        total_count: action.total_count,
       });
     default:
       return state;

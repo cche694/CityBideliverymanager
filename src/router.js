@@ -11,7 +11,7 @@ import Notification from "./page/ui/notification";
 import FormUI from "./page/ui/form";
 import RegistUI from "./page/ui/regist";
 import TabUI from "./page/ui/tab";
-import TableUI from "./page/ui/table";
+import TableBasic from "./page/table";
 import Home from "./page/home/index.jsx";
 import NoMatch from "./page/nomatch";
 
@@ -41,7 +41,7 @@ class IRouter extends Component {
                   ></Route>
                   <Route path="/admin/form/login" component={FormUI}></Route>
                   <Route path="/admin/form/reg" component={RegistUI}></Route>
-                  <Route path="/admin/table/basic" component={TableUI}></Route>
+                  <Route path="/admin/table/basic" component={TableBasic}></Route>
 
                   <Route component={NoMatch}></Route>
                 </Switch>
